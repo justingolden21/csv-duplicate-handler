@@ -13,7 +13,7 @@ function clearData() { // todo: implement
 	$('#settings-div').hide();
 	$('#display-table').hide(500, ()=> $('#display-table').html('') );
 
-	$('#start-message').html('Upload a file to get started...');
+	$('#info-message').html('Upload a file to get started...');
 	$('#error-message').html('');
 	$('#success-message').html('');
 
@@ -30,6 +30,9 @@ function updateTableDisplay() {
 	}
 
 	$('#display-table').hide().html(tmpHTML).show(500);
+
+	console.log(`${data.length} rows, ${data[0].length} cols`);
+	$('#info-message').html(`${data.length} rows, ${data[0].length} cols`);
 }
 
 // note: more than several thousand rows and it doesn't work
@@ -50,7 +53,7 @@ function downloadCSV() {
 function readCSV(evt) {
 	let f = evt.target.files[0];
 	if(f) {
-		$('#start-message').html('');
+		$('#info-message').html('');
 		$('#error-message').html('');
 		$('#success-message').html('');
 		
@@ -58,7 +61,7 @@ function readCSV(evt) {
 		r.onload = (e)=> {
 			let contents = e.target.result;
 
-			console.log(`file: ${f.name}\n type: ${f.type}\n size: ${f.size}\n contents: \n${contents}`);
+			console.log(`file: ${f.name}\n type: ${f.type}\n size: ${f.size}\n contents: ${contents.length>1000?'(first 1000 chars)':''} \n${contents.substring(0,1000)}`);
 			$('#success-message').html(`Successfully imported <b>${f.name}</b>`); // todo: toast or modal
 			fileName = f.name;
 

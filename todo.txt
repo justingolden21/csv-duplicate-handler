@@ -1,10 +1,12 @@
 ==== todo ====
-clear data btn
+drag and drop files in
 
 ==== maybe ====
 skip blank lines option
 setting for first line being header or not
 confirm modal/highlight for determine duplicates by select after first file upload
+loading icon
+info btn on top right: display message that files need same layout, works well for up to about 10k rows of data
 
 btn/modal to view raw text data, with textarea selected and with copy btn
 handle if data is formatted differently
@@ -13,8 +15,9 @@ count as duplicate only if multiple columns are the same option
 show/hide table, setting to default hide
 display faq/notes such as doesn't work with more than several thousand rows
 file download name settings (prefer old name, prefer new name, input for name it yourself, add date to end checkbox, date settings etc)
-highlight duplicat rows, show pop up with duplicate rows
+highlight duplicate rows, show pop up with duplicate rows
 modal to decide for each duplicate row individually what happens
+make logo/icon
 
 ==== nah ====
 add options for alphebatize? nah, that's spreadsheet stuff
