@@ -1,2 +1,1 @@
-# csv-duplicate-handler
- 
+# CSV Duplicate Handler

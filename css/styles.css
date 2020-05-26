@@ -1,0 +1,10 @@
+html {
+	scroll-behavior: smooth;
+}
+body {
+	margin: 1rem;
+	text-align: center;
+}
+.popover-body {
+	display: none;
+}

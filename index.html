@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSV Duplicate Handler</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+
+<h3 class="font-weight-light">CSV Manager &mdash; Duplicate Organizer</h3>
+Quickly handle duplicate entries in CSV files
+<hr>
+
+<button id="download-spreadsheet-btn" title="Download all data as spreadsheet" data-toggle="popover" class="btn btn-dark"><i class="fas fa-download"></i> Download CSV</button>
+<button id="upload-spreadsheet-btn" title="Upload spreadsheet to merge" data-toggle="popover" class="btn btn-dark"><i class="fas fa-upload"></i> Upload CSV</button>
+<input id="spreadsheet-file-input" type="file" class="d-none" accept=".csv">
+
+<div id="settings-div">
+	<hr><p><b>Merge Settings</b></p>
+
+	<label for="duplicate-behavior-select">If there are duplicate entries, then</label>
+	<select id="duplicate-behavior-select" class="form-control">
+		<option value="new">Keep only the new entries</option>
+		<option value="current">Keep only the current entries</option>
+		<option value="both">Keep both entries</option>
+	</select>
+
+	<label for="duplicate-identifier-select">Determine duplicates by having the same</label>
+	<select id="duplicate-identifier-select" class="form-control">
+		<!-- will be populated once one file is uploaded -->
+	</select>
+
+	<p><b>Other Settings</b></p>
+	<button id="clear-btn" class="btn btn-danger"><i class="fas fa-times"></i> Clear Data</button>
+	<hr>
+</div>
+
+
+<p id="start-message"></p>
+<p id="error-message"></p>
+<p id="success-message"></p>
+
+<hr>
+
+<table id="display-table" class="table table-bordered"></table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script src="js/util.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+
+<!-- <script type="module" src="js/util.js"></script>
+<script type="module" src="js/data.js"></script>
+<script type="module" src="js/ui.js"></script> -->
+
+</body>
+</html>
