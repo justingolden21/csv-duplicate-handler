@@ -3,6 +3,7 @@
 $( ()=> {
 
 	$('#settings-div').hide();
+	$('#loading-icon').hide();
 	$('#info-message').html('Upload a file to get started...');
 
 	$('[data-toggle="popover"]').popover({trigger:'hover', placement:'bottom'});

@@ -33,6 +33,7 @@ function updateTableDisplay() {
 
 	console.log(`${data.length} rows, ${data[0].length} cols`);
 	$('#info-message').html(`${data.length} rows, ${data[0].length} cols`);
+	$('#loading-icon').hide();
 }
 
 // note: more than several thousand rows and it doesn't work
@@ -56,6 +57,7 @@ function readCSV(evt) {
 		$('#info-message').html('');
 		$('#error-message').html('');
 		$('#success-message').html('');
+		$('#loading-icon').show();
 		
 		let r = new FileReader();
 		r.onload = (e)=> {

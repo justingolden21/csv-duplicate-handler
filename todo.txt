@@ -5,7 +5,6 @@ drag and drop files in
 skip blank lines option
 setting for first line being header or not
 confirm modal/highlight for determine duplicates by select after first file upload
-loading icon
 info btn on top right: display message that files need same layout, works well for up to about 10k rows of data
 
 btn/modal to view raw text data, with textarea selected and with copy btn
